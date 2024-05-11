@@ -6,18 +6,18 @@
     <link href="https://content.codecademy.com/projects/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     
-    <script src="js/vendor/angular.min.js"></script>
+    <script src="./js/vendor/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="GameboardApp">
     <div class="header">
       <h1 class="logo">GameBoard</h1>
     </div>
 
-    <div class="main">
+    <div class="main" ng-controller="ScoreController">
       <div class="container">
         
         <div class="row">
-          
+          <game ng-repeat="score in scores" info="score"></game>
 
         </div>
       
@@ -31,7 +31,7 @@
     <script src="js/controllers/ScoreController.js"></script>
 
     <!-- Directives -->
-    
+    <script src="js/directives/game.js"></script>
 
   </body>
 </html>
